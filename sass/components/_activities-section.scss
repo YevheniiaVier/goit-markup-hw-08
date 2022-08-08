@@ -1,0 +1,50 @@
+.activities {
+  @extend %section;
+  padding-top: 0;
+  &__section {
+    @extend %container;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    color: $title-text-color;
+
+    text-align: center;
+  }
+
+  &__list {
+    @extend %list;
+    display: flex;
+    gap: $card-gap;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 23.81%;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+
+    text-transform: uppercase;
+    color: $white-text-color;
+  }
+}

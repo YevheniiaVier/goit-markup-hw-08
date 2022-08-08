@@ -1,0 +1,52 @@
+.clients {
+  @extend %section;
+  &__section {
+    @extend %container;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    color: $title-text-color;
+
+    text-align: center;
+  }
+
+  &__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    gap: $card-gap;
+  }
+
+  &__item {
+    width: calc(100% - (5 * $card-gap) / 6);
+    height: 92px;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.clients__thumb {
+  @include transition(color);
+  @include transition(border);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+
+  border: 1px solid $border-card-color;
+  border-radius: 4px;
+  color: $border-card-color;
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    color: $accent-color;
+  }
+}
