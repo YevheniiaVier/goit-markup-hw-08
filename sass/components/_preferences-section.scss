@@ -1,16 +1,11 @@
-
-
-
-
 .preferences {
-    padding-top: 60px;
-    padding-bottom: 60px;
-//   @extend %section;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  //   @extend %section;
 
-//   &__section {
-//     @extend %container;
-//     display: flex;
-  
+  //   &__section {
+  //     @extend %container;
+  //     display: flex;
 
   &__title {
     @extend %visually-hidden;
@@ -18,14 +13,23 @@
 
   &__list {
     @extend %list;
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: $card-gap;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $card-gap;
+    }
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     gap: $card-gap;
   }
 
   &__item {
     margin-bottom: $card-gap;
-    // width: calc((100% - (3 * $card-gap)) / 4);
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - (1 * $card-gap)) / 2);
+    }
   }
 
   &__icons {
