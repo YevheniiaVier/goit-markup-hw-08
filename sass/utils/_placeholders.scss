@@ -3,13 +3,6 @@
   margin: 0;
   list-style: none;
 }
-%container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-}
 
 %visually-hidden {
   position: absolute;
@@ -26,4 +19,12 @@
 %section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+%container {
+  padding-left: 15px;
+  padding-right: 15px; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
