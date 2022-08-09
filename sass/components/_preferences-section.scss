@@ -1,6 +1,11 @@
 .preferences {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   //   @extend %section;
 
   //   &__section {
@@ -25,10 +30,15 @@
   }
 
   &__item {
-    margin-bottom: $card-gap;
+    @media screen and (max-width: 767px) {
+      margin-bottom: $card-gap;
+    }
 
-    @media screen and (min-width: 768px) {
-      width: calc((100% - (1 * $card-gap)) / 2);
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-basis: calc((100% - (1 * $card-gap)) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - (3 * $card-gap)) / 4);
     }
   }
 

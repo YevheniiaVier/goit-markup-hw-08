@@ -11,9 +11,22 @@
       rgba(47, 48, 58, 0.4)
     ),
     url(../../images/bgimg/header-img480.jpg);
-  background-size: 480px 320px;
+  background-size: 480px 400px;
   background-position: center;
   background-repeat: no-repeat;
+  @media screen and (min-width: 480px) {
+    max-width: 768px;
+    height: 400px;
+    background-size: 768px 400px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 1600px;
+    height: 600px;
+    background-size: 1200px 600px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
   &__title {
     margin-bottom: 30px;
     font-weight: 900;
@@ -23,36 +36,46 @@
     color: $white-text-color;
 
     text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 30px;
+      //     font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      //     letter-spacing: 0.06em;
+      //     color: $white-text-color;
+
+      //     text-transform: uppercase;
+    }
   }
 }
 
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    .hero-section {
-      background-image: url(../../images/bgimg/header-img480@2x.jpg);
-    }
+  .hero-section {
+    background-image: url(../../images/bgimg/header-img480@2x.jpg);
   }
+}
 
-  @media screen and (min-width: 481px) {
-    .hero-section {
-      background-image: url(../../images/bgimg/header-img768.jpg);
-    }
-    @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+@media screen and (min-width: 480px) {
+  .hero-section {
+    background-image: url(../../images/bgimg/header-img768.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     .hero-section {
       background-image: url(../../images/bgimg/header-img768@2x.jpg);
     }
   }
 }
-  @media screen and (min-width: 769px) {
-    .hero-section {
-      background-image: url(../../images/bgimg/header-img1600.jpg);
-    }
-    @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: url(../../images/bgimg/header-img1600.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     .hero-section {
       background-image: url(../../images/bgimg/header-img1600@2x.jpg);
     }
