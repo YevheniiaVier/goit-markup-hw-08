@@ -4,9 +4,6 @@
   }
   @extend %section;
   padding-top: 0;
-  &__section {
-    @extend %container;
-  }
 
   &__title {
     margin-bottom: 50px;
@@ -23,7 +20,6 @@
     @extend %list;
     display: flex;
     flex-wrap: wrap;
-    
     gap: $card-gap;
   }
 
