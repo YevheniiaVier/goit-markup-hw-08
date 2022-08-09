@@ -334,6 +334,27 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+.menu__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu__icon-close {
+  display: none;
+}
+
+.menu__button.is-open .menu__icon-close {
+  display: block;
+}
+.menu__button.is-open .menu__icon-menu {
+  display: none;
+}
+
 .button {
   border-radius: 4px;
   border: none;

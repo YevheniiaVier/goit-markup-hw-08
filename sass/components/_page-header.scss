@@ -1,20 +1,17 @@
 .page-header__container {
-
   background-color: red;
-
-
 }
 
 .page-header {
   border-bottom: 1px solid #ececec;
-  
+
   // position: fixed;
   //   top: 0;
   //   left: 0;
   // width: 100%;
   //   background-color: $bg-white-color;
   //   z-index: 1;
-  //   &_nav {
+  //   &__menu {
   //     display: flex;
   //     align-items: center;
   //   }
@@ -100,3 +97,22 @@
 //     color: $accent-color;
 //   }
 // }
+.menu__button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.menu__icon-close {
+  display: none;
+}
+
+.menu__button.is-open {
+  .menu__icon-close {
+    display: block;
+  }
+  .menu__icon-menu {
+    display: none;
+  }
+}
