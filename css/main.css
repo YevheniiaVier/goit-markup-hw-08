@@ -1,4 +1,4 @@
-.activities__list, .preferences__list, .social__item, .contacts, .menu-mobile__socials, .menu-mobile {
+.activities__list, .preferences__list, .social__item, .contacts, .menu-mobile__socials, .menu-mobile, .page-header__menu {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -273,6 +273,12 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
   background-color: #ffffff;
+  padding-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
 }
 
 h1,
@@ -328,16 +334,42 @@ img {
 
 .page-header {
   border-bottom: 1px solid #ececec;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #ffffff;
+  z-index: 1;
 }
 .page-header__container {
+  position: relative;
   min-height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 88px;
+  gap: 50px;
+}
+.page-header__contacts {
+  margin-left: auto;
+}
+
+.menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -391,6 +423,9 @@ img {
 }
 
 .button__menu {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
