@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     max-width: 768px;
     height: 400px;
     // background-size: 768px 400px;
@@ -22,11 +22,10 @@
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
     height: 600px;
+    padding: 200px 0;
     // background-size: 1200px 600px;
   }
-  @media screen and (min-width: 1200px) {
-    padding: 200px 0;
-  }
+  
   &__title {
     margin-bottom: 30px;
     font-weight: 900;
