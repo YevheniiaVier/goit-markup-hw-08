@@ -1,4 +1,4 @@
-.activities__list, .preferences__list, .social__item, .contacts, .menu-mobile__socials, .menu-mobile, .page-header__menu {
+.activities__list, .preferences__list, .social__item, .contacts, .menu-mobile__socials, .menu-mobile {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -331,7 +331,16 @@ img {
   background-color: #ffffff;
 }
 .page-header__container {
-  min-height: 80px;
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 767px) {
@@ -381,6 +390,18 @@ img {
   background-color: rgba(33, 33, 33, 0.2);
 }
 
+.button__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 @media screen and (min-width: 768px) {
   .button__menu {
     display: none;
@@ -404,7 +425,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 84px 48px 40px;
+  padding: 48px 83px 48px 40px;
   background-color: #ffffff;
   z-index: 10;
   -webkit-transform: translateX(100%);
