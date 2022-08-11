@@ -2,16 +2,56 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $secondary-background-color;
-  // &__container {
-  //   @extend %container;
-  //   display: flex;
-  // }
-  // &__join-us {
-  //   min-width: 206px;
-  //   min-height: 80px;
-  //   margin-top: 12px;
-  //   margin-left: 70px;
-  // }
+
+  &__container {
+    @extend %container;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  &__contacts {
+    width: 232px;
+    @media screen and (max-width: 1199px) {
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+    @media screen and(min-width:768px) and (max-width: 1199px) {
+      margin-left: 61px;
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__join-us {
+    min-width: 206px;
+    min-height: 80px;
+    @media screen and (min-width: 768px) {
+      margin-top: 5px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+    @media screen and(min-width:768px) and (max-width: 1199px) {
+      margin-right: 74px;
+      margin-left: auto;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-top: 12px;
+      margin-left: 70px;
+    }
+  }
+
   &__subtitle {
     display: block;
     font-weight: 700;
@@ -22,21 +62,34 @@
     color: $white-text-color;
     margin-bottom: 20px;
   }
-}
-.page-footer__logo {
-  display: block;
-  margin-bottom: 20px;
-}
-.logo {
-  &--white {
-    color: $white-text-color;
+
+  &__social {
+  }
+
+  &__item {
+  }
+
+  &__thumb {
+    @media screen and(min-width:768px) {
+      display: flex;
+    }
+    @media screen and(min-width:768px) and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
   }
 }
-
+.container {
+}
+.logo {
+}
+.logo--white {
+  color: $white-text-color;
+}
 .address {
   &__list {
     @extend %list;
   }
+
   &__item:not(:last-child) {
     margin-bottom: 8px;
     @media screen and (min-width: 1200px) {
@@ -58,225 +111,108 @@
       color: $accent-color;
     }
   }
+
+  &__link--white {
+  }
 }
+.social {
+  &__list {
+    @extend %list;
+  }
 
-// .social {
-//   &__list {
-//     @extend %list;
-//   }
-// }
+  &__item {
+  }
 
-// .social__link--white {
-//   @include transition(background-color);
+  &__link {
+  }
 
-//   color: $white-text-color;
-//   background-color: rgba(255, 255, 255, 0.1);
-//   &:hover,
-//   &:focus {
-//     background-color: $accent-color;
-//   }
-// }
-// .sign-up {
-//   width: 570px;
-//   margin-left: auto;
-//   margin-top: 12px;
-//   &__form {
-//     position: relative;
-//     display: flex;
-//   }
-//   &__field {
-//     display: inline-block;
-//     flex-grow: 1;
-//   }
-//   &__input {
-//     width: 100%;
-//     height: 50px;
-//     border: 1px solid rgba(255, 255, 255, 0.3);
-//     border-radius: $borderRadius;
-//     box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
-//     background-color: transparent;
-//     padding-top: 15px;
-//     padding-right: 16px;
-//     padding-bottom: 15px;
-//     padding-left: 16px;
+  &__link--white {
+    @include transition(background-color);
 
-//     font-size: 16px;
-//     line-height: 1.25;
-//     letter-spacing: 0.03em;
-//     color: rgba(255, 255, 255, 0.6);
-//   }
+    color: $white-text-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+}
+.sign-up {
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
+    margin-left: 93px;
+    width: 570px;
+  }
 
-//   &__button {
-//     position: relative;
-//     padding: 10px 62px 10px 28px;
-//     margin-left: 12px;
-//   }
-//   &__icon {
-//     fill: $white-text-color;
-//     margin-left: 10px;
-//     position: absolute;
-//     top: 50%;
-//     right: 28px;
-//     transform: translateY(-50%);
-//   }
-// }
+  &__form {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+    }
+  }
 
-// .sign-up__label {
-//   position: absolute;
-//   top: 50%;
-//   left: 16px;
+  &__field {
+    position: relative;
+    @media screen and (max-width: 1199px) {
+      width: 450px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media screen and (min-width: 1200px) {
+      display: block;
+      flex-grow: 1;
+    }
+  }
 
-//   font-size: 16px;
-//   line-height: 1.25;
-//   letter-spacing: 0.03em;
-//   color: rgba(255, 255, 255, 0.6);
-//   transform: translateY(-50%);
-//   transition: color $time-function;
-//   .sign-up__input:focus + &,
-//   .sign-up__input:not(:placeholder-shown) + & {
-//     color: transparent;
-//   }
-// }
-// .page-footer__contacts {
-//   width: 231px;
-// }
+  &__input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: $borderRadius;
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: transparent;
+    padding-top: 15px;
+    padding-right: 16px;
+    padding-bottom: 15px;
+    padding-left: 16px;
 
-// ------------------------------------------
-// .page-footer {
-//   padding-top: 60px;
-//   padding-bottom: 60px;
-//   background-color: $secondary-background-color;
-//   &__container {
-//     @extend %container;
-//     display: flex;
-//   }
-//   &__join-us {
-//     min-width: 206px;
-//     min-height: 80px;
-//     margin-top: 12px;
-//     margin-left: 70px;
-//   }
-//   &__subtitle {
-//     display: block;
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.03em;
-//     text-transform: uppercase;
-//     color: $white-text-color;
-//     margin-bottom: 20px;
-//   }
-// }
-// .page-footer__logo {
-//   display: block;
-//   margin-bottom: 20px;
-// }
-// .logo {
-//   &--white {
-//     color: $white-text-color;
-//   }
-// }
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
 
-// .address {
-//   &__list {
-//     @extend %list;
-//   }
-//   &__item + .address__item {
-//     margin-top: 9px;
-//   }
-//   &__link {
-//     text-decoration: none;
-//     @include transition(color);
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
 
-//     font-style: normal;
-//     color: $transparent-color;
-//     &--white {
-//       color: $white-text-color;
-//     }
-//     &:hover,
-//     &:focus {
-//       color: $accent-color;
-//     }
-//   }
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%);
+    transition: color $time-function;
+    .sign-up__input:focus + &,
+    .sign-up__input:not(:placeholder-shown) + & {
+      color: transparent;
+    }
+  }
+  &__button {
+    position: relative;
+    padding: 10px 62px 10px 28px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+    }
+  }
 
-// }
-// .social {
-//   &__list {
-//     @extend %list;
-//   }
-// }
-
-// .social__link--white {
-//   @include transition(background-color);
-
-//   color: $white-text-color;
-//   background-color: rgba(255, 255, 255, 0.1);
-//   &:hover,
-//   &:focus {
-//     background-color: $accent-color;
-//   }
-// }
-// .sign-up {
-//   width: 570px;
-//   margin-left: auto;
-//   margin-top: 12px;
-//   &__form {
-//     position: relative;
-//     display: flex;
-//   }
-//   &__field {
-//     display: inline-block;
-//     flex-grow: 1;
-//   }
-//   &__input {
-//     width: 100%;
-//     height: 50px;
-//     border: 1px solid rgba(255, 255, 255, 0.3);
-//     border-radius: $borderRadius;
-//     box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
-//     background-color: transparent;
-//     padding-top: 15px;
-//     padding-right: 16px;
-//     padding-bottom: 15px;
-//     padding-left: 16px;
-
-//     font-size: 16px;
-//     line-height: 1.25;
-//     letter-spacing: 0.03em;
-//     color: rgba(255, 255, 255, 0.6);
-//   }
-
-//   &__button {
-//     position: relative;
-//     padding: 10px 62px 10px 28px;
-//     margin-left: 12px;
-//   }
-//   &__icon {
-//     fill: $white-text-color;
-//     margin-left: 10px;
-//     position: absolute;
-//     top: 50%;
-//     right: 28px;
-//     transform: translateY(-50%);
-//   }
-// }
-
-// .sign-up__label {
-//   position: absolute;
-//   top: 50%;
-//   left: 16px;
-
-//   font-size: 16px;
-//   line-height: 1.25;
-//   letter-spacing: 0.03em;
-//   color: rgba(255, 255, 255, 0.6);
-//   transform: translateY(-50%);
-//   transition: color $time-function;
-//   .sign-up__input:focus + &,
-//   .sign-up__input:not(:placeholder-shown) + & {
-//     color: transparent;
-//   }
-// }
-// .page-footer__contacts {
-//   width: 231px;
-// }
+  &__icon {
+    fill: $white-text-color;
+    margin-left: 10px;
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+  }
+}
