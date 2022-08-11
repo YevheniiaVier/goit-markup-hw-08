@@ -62,13 +62,6 @@
     color: $white-text-color;
     margin-bottom: 20px;
   }
-
-  &__social {
-  }
-
-  &__item {
-  }
-
   &__thumb {
     @media screen and(min-width:768px) {
       display: flex;
@@ -78,10 +71,7 @@
     }
   }
 }
-.container {
-}
-.logo {
-}
+
 .logo--white {
   color: $white-text-color;
 }
@@ -111,19 +101,10 @@
       color: $accent-color;
     }
   }
-
-  &__link--white {
-  }
 }
 .social {
   &__list {
     @extend %list;
-  }
-
-  &__item {
-  }
-
-  &__link {
   }
 
   &__link--white {

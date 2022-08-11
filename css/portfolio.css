@@ -395,6 +395,7 @@ img {
 .button-menu:hover, .button-menu:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .menu {
   width: 100%;
   display: -webkit-box;
@@ -428,20 +429,18 @@ img {
   color: #2196f3;
   position: relative;
 }
-@media screen and (min-with: 1200px) {
-  .menu--current::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #2196f3;
-    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 2px;
-  }
+.menu__link--current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -521,6 +520,7 @@ img {
 .button-menu:hover, .button-menu:focus {
   background-color: transparent;
 }
+
 .button-menu--mobile {
   position: absolute;
   top: 10px;
@@ -810,6 +810,7 @@ img {
 .address__link:hover, .address__link:focus {
   color: #2196f3;
 }
+
 .social__link--white {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
