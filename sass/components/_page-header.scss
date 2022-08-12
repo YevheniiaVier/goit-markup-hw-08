@@ -8,6 +8,7 @@
   z-index: 1;
   &__container {
     position: relative;
+    justify-content: space-between;
     min-height: 60px;
     display: flex;
     align-items: center;
@@ -36,10 +37,9 @@
   color: $black-text-color;
 }
 .button-menu {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  display: inline-flex;
+
+  
+  display: flex;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -54,7 +54,19 @@
   //   background-color: rgba(0, 0, 0, 0.1);
   // }
 }
-
+.button-menu--mobile {
+    position: absolute;
+  top: 10px;
+  right: 0;
+  // top: 10px;
+  // right: 15px;
+  // fill: currentColor;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
 
 .menu {
   width: 100%;
@@ -152,18 +164,6 @@
 }
 .menu-container.is-open {
   transform: translateX(0);
-}
-
-.button-menu--mobile {
-  
-  // top: 10px;
-  // right: 15px;
-  // fill: currentColor;
-  background-color: transparent;
-  &:hover,
-  &:focus {
-    fill: $accent-color;
-  }
 }
 
 .menu-mobile {
