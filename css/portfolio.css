@@ -270,6 +270,10 @@ body {
   }
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -377,9 +381,9 @@ img {
   position: absolute;
   top: 10px;
   right: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -391,9 +395,6 @@ img {
   .button-menu {
     display: none;
   }
-}
-.button-menu:hover, .button-menu:focus {
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .menu {
@@ -517,20 +518,11 @@ img {
           transform: translateX(0);
 }
 
-.button-menu:hover, .button-menu:focus {
-  background-color: transparent;
-}
-
 .button-menu--mobile {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  fill: currentColor;
   background-color: transparent;
 }
 .button-menu--mobile:hover, .button-menu--mobile:focus {
   fill: #2196f3;
-  background-color: transparent;
 }
 
 .menu-mobile {
