@@ -172,9 +172,12 @@
     fill: $accent-color;
   }
 }
-.menu-mobile {
-  @extend %list;
-  flex-grow: 1;
+.mobile-menu {
+  &__container {
+    @extend %list;
+    flex-grow: 1;
+  }
+
   &__item--mobile:not(:last-child) {
     margin-bottom: 32px;
   }
