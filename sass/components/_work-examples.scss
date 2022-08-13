@@ -1,7 +1,7 @@
 .work-examples {
-  @extend %section;
+  padding-top: 60px;
+  padding-bottom: 60px;
   &__section {
-    @extend %container;
   }
 
   &__title {
@@ -12,57 +12,60 @@
     @extend %list;
     margin-bottom: 50px;
     display: flex;
-    justify-content: center;
     gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  &__filter {
+  }
+  &__button {
+    @include transition(color);
+    @include transition(background-color);
+    @include transition(box-shadow);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    height: 38px;
+    padding: 6px 22px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+    background-color: $accent-background-color;
+    &:hover,
+    &:focus {
+      color: $white-text-color;
+      background-color: $accent-color;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
   }
 }
-
-.work-examples__filter {
-  @include transition(color);
-  @include transition(background-color);
-  @include transition(box-shadow);
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  height: 38px;
-  padding: 6px 22px;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.62;
-  letter-spacing: 0.03em;
-  color: $title-text-color;
-  background-color: $accent-background-color;
-  &:hover,
-  &:focus {
-    color: $white-text-color;
-    background-color: $accent-color;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
+.container {
 }
-
 .example-card {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * $card-gap);
-  margin-top: calc(-1 * $card-gap);
   &__item {
-    flex-basis: calc(100% / 3 - $card-gap);
-    margin-left: $card-gap;
-    margin-top: $card-gap;
   }
 
   &__link {
     text-decoration: none;
+    @include transition(box-shadow);
+    display: block;
+    color: inherit;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
   }
 
   &__img {
     position: relative;
     overflow: hidden;
   }
-
   &__text {
     position: absolute;
     top: 50%;
@@ -89,25 +92,12 @@
     color: $title-text-color;
     margin-bottom: 4px;
   }
+
   &__filter {
     font-size: 16px;
     line-height: 1.87;
   }
 }
-
-.example-card__link {
-  text-decoration: none;
-  @include transition(box-shadow);
-
-  display: block;
-  color: inherit;
-  &:hover,
-  &:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-  }
-}
-
 .example-card__overlay {
   position: absolute;
   width: 100%;
@@ -124,3 +114,19 @@
     transform: translateY(0);
   }
 }
+
+// .example-card {
+//
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-left: calc(-1 * $card-gap);
+//   margin-top: calc(-1 * $card-gap);
+//   &__item {
+//     flex-basis: calc(100% / 3 - $card-gap);
+//     margin-left: $card-gap;
+//     margin-top: $card-gap;
+//   }
+
+// }
+
+//
