@@ -18,7 +18,8 @@
   <body>
     <!-------------------- header -------------------->
     <header class="page-header">
-      <div class="page-header__container container">
+      <div class="page-header__cntainer container">
+        <nav class="page-header__nav">
         <a href="./index.html" lang="en" class="logo"
           >Web<span class="logo logo--black">Studio</span></a
         >
@@ -78,6 +79,8 @@
             </li>
           </ul>
         </div>
+        </nav>
+
       </div>
     </header>
     <main>
@@ -700,17 +703,21 @@
             ></textarea>
           </label>
 
-          <label class="form__contract-text">
-            Погоджуюся з розсилкою та приймаю
-            <a class="form__contract-link" href="">Умови договору</a>
-
+          <div class="form__contract-text">
             <input
+              type="checkbox"
               class="form__checkbox"
               type="checkbox"
               name="contract-policy"
+              id="policy"
+              value="true"
             />
-            <span class="form__icon-check"></span>
-          </label>
+            <label for="policy" class="form__check-text">
+              <span class="form__checkbox-icon"> </span>
+              Погоджуюся з розсилкою та приймаю
+              <a class="form__contract-link" href="">Умови договору</a>
+            </label>
+          </div>
 
           <button class="button form__button" type="submit">Відправити</button>
         </form>
@@ -731,7 +738,8 @@
           ></use>
         </svg>
       </button>
-      <ul class="menu-mobile">
+      <div class="mobile-menu">
+        <ul class="menu-mobile">
         <li class="menu-mobile__item menu-mobile__item--mobile">
           <a
             href="./index.html"
@@ -785,6 +793,8 @@
           <a href="" class="mobile-socials__link">LinkedIn</a>
         </li>
       </ul>
+      </div>
+      
     </div>
 
     <script
