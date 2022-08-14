@@ -163,9 +163,6 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  // top: 10px;
-  // right: 15px;
-  // fill: currentColor;8
   background-color: transparent;
   &:hover,
   &:focus {
@@ -233,9 +230,9 @@
   display: flex;
   flex-wrap: wrap;
 
-  justify-content: left;
+  // justify-content: left;
   gap: 20px;
-  align-items: flex-end;
+  // align-items: flex-end;
 
   &__item {
     position: relative;
