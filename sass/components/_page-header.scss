@@ -214,6 +214,7 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: $accent-color;
+
   }
 
   &__link--mail {
@@ -229,10 +230,7 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-
-  // justify-content: left;
   gap: 20px;
-  // align-items: flex-end;
 
   &__item {
     position: relative;

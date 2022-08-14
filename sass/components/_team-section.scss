@@ -28,15 +28,15 @@
 }
 
 .team-card {
-  width: 450px;
+  max-width: 450px;
   box-shadow: $team-card-shadow;
   border-radius: 0px 0px 4px 4px;
   background-color: $bg-white-color;
   @media screen and (min-width: 768px) {
-    width: calc((100% - (1 * $card-gap)) / 2);
+    max-width: calc((100% - (1 * $card-gap)) / 2);
   }
   @media screen and (min-width: 1200px) {
-    width: calc((100% - (3 * $card-gap)) / 4);
+    max-width: calc((100% - (3 * $card-gap)) / 4);
   }
   &__content {
     padding-top: 30px;
