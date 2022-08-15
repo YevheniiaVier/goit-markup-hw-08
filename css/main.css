@@ -726,7 +726,7 @@ img {
 .hero-section {
   text-align: center;
   background-color: #c4c4c4;
-  padding: 118px 0;
+  padding-top: 118px;
   max-width: 1600px;
   height: 400px;
   margin-left: auto;
@@ -745,9 +745,15 @@ img {
 @media screen and (min-width: 1200px) {
   .hero-section {
     height: 600px;
-    padding: 200px 0;
+    padding-top: 200px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .hero-section__button {
+    width: 216px;
+  }
+}
+
 @media screen and (min-width: 481px) {
   .hero-section {
     background-image: url(../../images/bgimg/header-img768.jpg);
@@ -806,7 +812,7 @@ img {
   }
 }
 @media screen and (max-width: 767px) {
-  .preferences__item {
+  .preferences__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -917,6 +923,9 @@ img {
   color: #212121;
   text-align: center;
 }
+.team__list {
+  gap: 30px;
+}
 @media screen and (min-width: 768px) {
   .team__list {
     display: -webkit-box;
@@ -924,7 +933,6 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 30px;
   }
 }
 

@@ -1,7 +1,7 @@
 .hero-section {
   text-align: center;
   background-color: #c4c4c4;
-  padding: 118px 0;
+  padding-top: 118px;
   max-width: 1600px;
   height: 400px;
   margin-left: auto;
@@ -23,9 +23,12 @@
 
   @media screen and (min-width: 1200px) {
     height: 600px;
-    padding: 200px 0;
+    padding-top: 200px;
   }
   &__button {
+    @media screen and (min-width: 1200px) {
+      width: 216px;
+    }
   }
 }
 
