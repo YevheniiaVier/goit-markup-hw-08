@@ -2,9 +2,10 @@
   background-color: $accent-background-color;
   padding-top: 60px;
   padding-bottom: 60px;
-  // @media screen and (min-width: 1200px) {
-  //   @extend %section;
-  // }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   &__section {
   }
 
@@ -19,19 +20,27 @@
 
   &__list {
     @extend %list;
-    gap: $card-gap;
+
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
+      gap: $card-gap;
     }
   }
 }
 
+.team-card:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
 .team-card {
   max-width: 450px;
   box-shadow: $team-card-shadow;
   border-radius: 0px 0px 4px 4px;
   background-color: $bg-white-color;
+  overflow: hidden;
+
   @media screen and (min-width: 768px) {
     max-width: calc((100% - (1 * $card-gap)) / 2);
   }
