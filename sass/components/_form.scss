@@ -10,8 +10,7 @@
   opacity: 1;
   pointer-events: initial;
   overflow-y: scroll;
-  @include transition(opacity);
-  @include transition(visibility);
+  transition: opacity var(--time-function), visibility var(--time-function);
 
   &.is-hidden {
     opacity: 0;
