@@ -794,6 +794,11 @@ img {
   text-transform: uppercase;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .preferences__subtitle {
+    text-align: left;
+  }
+}
 
 .activities {
   padding-top: 0;
