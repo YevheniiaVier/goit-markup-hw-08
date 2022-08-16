@@ -1,12 +1,14 @@
-@import './utils/variables';
-@import './utils/placeholders';
-@import './utils/mixins';
-@import './base-settings/normalize';
-@import './components/basic';
-@import './components/logo';
-@import './components/page-header';
-@import './components/button';
+@import "./utils/variables";
+@import "./components/vars";
+@import "./components/_vars";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./base-settings/normalize";
+@import "./components/basic";
+@import "./components/logo";
+@import "./components/page-header";
+@import "./components/button";
 
-@import './components/socials';
-@import './components/page-footer';
-@import './components/work-examples';
+@import "./components/socials";
+@import "./components/work-examples";
+@import "./components/page-footer";

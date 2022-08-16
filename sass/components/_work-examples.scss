@@ -5,8 +5,7 @@
     padding-top: 94px;
     padding-bottom: 94px;
   }
-  &__section {
-  }
+  
 
   &__title {
     @extend %visually-hidden;
@@ -31,8 +30,6 @@
     }
   }
 
-  &__filter {
-  }
   &__button {
     @include transition(color);
     @include transition(background-color);
